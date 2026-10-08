@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #100912;
+  color: #fff;
+  font-family: Georgia, serif;
+  line-height: 1.7;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 50px 20px;
+
+  background:
+    radial-gradient(circle at top, #572047, transparent 45%),
+    linear-gradient(135deg, #130914, #2b1229);
+
+  overflow: hidden;
+}
+
+.heart {
+  font-size: 80px;
+  color: #ef76a9;
+
+  animation: heartbeat 1.5s infinite;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 7vw, 4.5rem);
+  margin: 10px 0;
+
+  color: #fff;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #f6d7e6;
+  font-size: 1.1rem;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 30px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+
+  padding: 14px 24px;
+
+  border-radius: 50px;
+
+  font-weight: bold;
+  font-size: 1rem;
+
+  transition: 0.3s;
+}
+
+#openHeart {
+  background: #ed78aa;
+  color: #260b1b;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #ed78aa;
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-4px);
+}
+
+
+/* SECTIONS */
+
+.section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 45px 25px;
+
+  background: #211321;
+
+  border: 1px solid #ffffff12;
+  border-radius: 25px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+
+  color: #f5a6c8;
+}
+
+
+/* LETTER */
+
+.letter {
+  max-width: 750px;
+  margin: auto;
+
+  color: #f7e5ed;
+  font-size: 1.08rem;
+}
+
+.letter p {
+  margin-bottom: 18px;
+}
+
+
+/* REASON CARDS */
+
+.instruction {
+  text-align: center;
+  color: #dcaac1;
+
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(190px, 1fr));
+
+  gap: 18px;
+}
+
+.reason-card {
+  text-align: left;
+
+  background: #2d192e;
+
+  border: 1px solid #ffffff15;
+
+  border-radius: 18px;
+
+  color: white;
+
+  padding: 25px;
+}
+
+.reason-card span {
+  color: #e878a9;
+  font-size: 0.85rem;
+}
+
+.reason-card h3 {
+  margin: 8px 0;
+}
+
+.reason-card p {
+  color: #dcaac1;
+}
+
+.reason-card:hover {
+  background: #3a1d38;
+  transform: translateY(-6px);
+}
+
+#reasonResult {
+  text-align: center;
+
+  margin-top: 25px;
+  padding: 20px;
+
+  color: #ffdbea;
+
+  background: #30182d;
+
+  border-radius: 15px;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+  max-width: 700px;
+  margin: auto;
+
+  border-left: 3px solid #e878a9;
+
+  padding-left: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 35px;
+}
+
+.timeline-item span {
+  color: #e878a9;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.timeline-item h3 {
+  margin: 5px 0;
+}
+
+.timeline-item p {
+  color: #d9bdca;
+}
+
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 20px;
+}
+
+.photo {
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    #32172f,
+    #1b1020
+  );
+
+  border: 1px solid #ffffff15;
+}
+
+.photo div {
+  font-size: 60px;
+}
+
+.photo p {
+  color: #f2bfd5;
+  margin-top: 10px;
+}
+
+.photo-note {
+  text-align: center;
+
+  color: #a9909e;
+
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+
+/* SURPRISE */
+
+.surprise-section {
+  text-align: center;
+}
+
+#surprise {
+  max-width: 650px;
+  margin: auto;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: #351a31;
+
+  color: #ffe4ef;
+}
+
+#surprise h3 {
+  color: #f38ab5;
+  font-size: 1.7rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#clickCounter {
+  margin-top: 25px;
+  color: #cfa9bb;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 35px 20px;
+
+  color: #cda7b9;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes heartbeat {
+
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.15);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .section {
+    margin: 18px 12px;
+    padding: 30px 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+}
